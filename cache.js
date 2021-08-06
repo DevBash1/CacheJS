@@ -82,16 +82,3 @@ function cache() {
         return len;
     }
 }
-
-let cached = new cache();
-console.log(cached);
-
-cached.store("index.html",123456);
-
-cached.onSuccess(function(id) {
-    console.log(id);
-});
-
-cached.onError(function(err) {
-    console.log(err);
-});
